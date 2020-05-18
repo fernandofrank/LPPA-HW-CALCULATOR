@@ -1,0 +1,110 @@
+body{
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.calculator{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    min-height: 460px;
+    background-color: #2A2132;
+}
+
+.screen{
+    display: flex;
+    position: relative;
+    justify-content: left;
+    width: 350px;
+    height: 60px;
+    font-size: 55px;
+    margin: 15px 10px 15px 10px;
+    color: white;
+    background-color: #333333;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    margin: 0px 10px 15px 10px;
+}
+
+.operations{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 350px;
+    height: 70px;
+}
+
+.operations button{
+    width: 25%;
+    margin: 2px ;
+	padding: 15px 24px;
+	font-size: 30px;
+}
+
+.group_numbers{
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 280px;
+}
+
+.number{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 350px;
+    height: 70px;
+}
+
+.number button{
+    width: 33%;
+    margin: 2px ;
+	padding: 15px 24px;
+	font-size: 30px;
+}
+.equal{
+    align-self: flex-start;
+    height: 207px;
+}
+.number_123{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 262px;
+    height: 70px;
+}
+
+.number_123 button{
+    margin: 2px ;
+	padding: 15px 24px;
+	font-size: 30px;
+    width: 33%;
+}
+
+.number0_point{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 262px;
+    height: 70px;
+}
+
+.number0_point button{
+    margin: 2px ;
+	padding: 15px 24px;
+	font-size: 30px;
+}
+
+.N0{
+    width: 66%;
+}
+
+.point{
+    width: 32%;
+}
