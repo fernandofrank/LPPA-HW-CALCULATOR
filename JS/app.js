@@ -62,36 +62,59 @@ var getElements = function () {
     C.onclick = function (e) {
         c_screen();
     }
+
+    //read firt number 
     sum.onclick = function (e) {
         operation_a = result.textContent;
-        operation = "+";
-        operation_scren.textContent = operation_a + " +"
-        clean();
+        if (operation_a != "") {
+            operation = "+";
+            operation_scren.textContent = operation_a + " +"
+            clean();
+        } else {
+            result.textContent = "Error"
+        }
     }
     sub.onclick = function (e) {
         operation_a = result.textContent;
-        operation = "-";
-        operation_scren.textContent = operation_a + " -"
-        clean();
+        if (operation_a != "") {
+            operation = "-";
+            operation_scren.textContent = operation_a + " -"
+            clean();
+        } else {
+            result.textContent = "Error"
+        }
     }
     mul.onclick = function (e) {
         operation_a = result.textContent;
-        operation = "*";
-        operation_scren.textContent = operation_a + " X"
-        clean();
+        if (operation_a != "") {
+            operation = "X";
+            operation_scren.textContent = operation_a + " X"
+            clean();
+        } else {
+            result.textContent = "Error"
+        }
     }
     div.onclick = function (e) {
         operation_a = result.textContent;
-        operation = "/";
-        operation_scren.textContent = operation_a + " ÷"
-        clean();
+        if (operation_a != "") {
+            operation = "÷";
+            operation_scren.textContent = operation_a + " ÷"
+            clean();
+        } else {
+            result.textContent = "Error"
+        }
     }
+    // read second number 
     equal.onclick = function (e) {
         operation_b = result.textContent;
-        solve();
+        if (operation_b != "") {
+            solve();
+        } else {
+            result.textContent = "Error"
+        }
 
     }
-
+    // solve oporatiobs 
     function solve(e) {
         var result_op = 0;
         switch (operation) {
@@ -107,7 +130,7 @@ var getElements = function () {
                 result_op = parseFloat(operation_a) * parseFloat(operation_b);
                 operation_scren.textContent = operation_a + " X " + operation_b + " ="
                 break;
-            case "/":
+            case "÷":
                 result_op = parseFloat(operation_a) / parseFloat(operation_b);
                 operation_scren.textContent = operation_a + " ÷ " + operation_b + " ="
                 break;
@@ -116,7 +139,7 @@ var getElements = function () {
         result.textContent = result_op;
         verfication = (true)
     }
-
+    // clear functions  
     function clean() {
         result.textContent = "";
     }
