@@ -1,10 +1,11 @@
-var operation_a;
-var operation_b;
+var operation_a = 0;
+var operation_b = 0;
 var operation;
-var verification = new Boolean(false);
 
 var getElements = function () {
+
     //values
+
     var result = document.getElementById('result');
     var operation_scren = document.getElementById('operation');
     var n1 = document.getElementById('N1');
@@ -26,6 +27,7 @@ var getElements = function () {
     var div = document.getElementById('division');
 
     //funtions
+
     n1.onclick = function (e) {
         result.textContent = result.textContent + "1";
     }
@@ -59,6 +61,7 @@ var getElements = function () {
     point.onclick = function (e) {
         result.textContent = result.textContent + ".";
     }
+
     C.onclick = function (e) {
         c_screen();
     }
@@ -74,6 +77,7 @@ var getElements = function () {
             result.textContent = "Error"
         }
     }
+
     sub.onclick = function (e) {
         operation_a = result.textContent;
         if (operation_a != "") {
@@ -84,6 +88,7 @@ var getElements = function () {
             result.textContent = "Error"
         }
     }
+
     mul.onclick = function (e) {
         operation_a = result.textContent;
         if (operation_a != "") {
@@ -94,6 +99,7 @@ var getElements = function () {
             result.textContent = "Error"
         }
     }
+
     div.onclick = function (e) {
         operation_a = result.textContent;
         if (operation_a != "") {
@@ -104,6 +110,7 @@ var getElements = function () {
             result.textContent = "Error"
         }
     }
+
     // read second number 
     equal.onclick = function (e) {
         operation_b = result.textContent;
@@ -126,7 +133,7 @@ var getElements = function () {
                 result_op = parseFloat(operation_a) - parseFloat(operation_b);
                 operation_scren.textContent = operation_a + " - " + operation_b + " ="
                 break;
-            case "*":
+            case "X":
                 result_op = parseFloat(operation_a) * parseFloat(operation_b);
                 operation_scren.textContent = operation_a + " X " + operation_b + " ="
                 break;
@@ -137,31 +144,27 @@ var getElements = function () {
         }
         reset();
         result.textContent = result_op;
-        verfication = (true)
+
     }
     // clear functions  
     function clean() {
         result.textContent = "";
     }
+
     function c_screen() {
         result.textContent = "";
         operation_scren.textContent = "";
         operation_a = 0;
         operation_b = 0;
         operation = "";
+
     }
 
     function reset() {
-        if (verification = true) {
-            result.textContent = "";
-            operation_a = 0;
-            operation_b = 0;
-            operation = "";
-            verfication = false;
-        }
-
+        result.textContent = "";
+        operation_a = 0;
+        operation_b = 0;
     }
-
 }
 
 var init = function () {
