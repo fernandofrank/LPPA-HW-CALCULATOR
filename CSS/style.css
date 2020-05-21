@@ -16,20 +16,43 @@ body{
 
 .screen{
     display: flex;
+    flex-direction: column;
     position: relative;
     justify-content: left;
     width: 350px;
-    height: 60px;
+    height: 120px;
     font-size: 55px;
     margin: 15px 10px 15px 10px;
-    color: white;
     background-color: #333333;
+}
+
+#result{
+    display: flex;
+    position: relative;
+    justify-content: left;
+    font-size: 55px;
+    min-width: 350px;
+    height: 55px;
+    color: #ffffff;
+    background-color:#333333;
+}
+
+#operation{
+    display: flex;
+    position: relative;
+    justify-content: left;
+    align-items: flex-end;
+    font-size: 30px;
+    min-width: 350px;
+    height: 55px;
+    color: #ffffff;
+    background-color:#333333;
 }
 
 .buttons{
     display: flex;
     flex-direction: column;
-    margin: 0px 10px 15px 10px;
+    margin: 0 10px 15px 10px;
 }
 
 .operations{
@@ -68,7 +91,7 @@ body{
 	padding: 15px 24px;
 	font-size: 30px;
 }
-.equal{
+#equal{
     align-self: flex-start;
     height: 207px;
 }
@@ -101,10 +124,11 @@ body{
 	font-size: 30px;
 }
 
-.N0{
+#N0{
     width: 66%;
+
 }
 
-.point{
+#point{
     width: 32%;
 }
